@@ -1,9 +1,9 @@
 // stores/users.js
-import { defineStore } from 'pinia';
+//import { defineStore } from 'pinia';
 // Import axios to make HTTP requests
 import axios from 'axios';
 
-export const useHeroStore = defineStore('hero', {
+/*export const useHeroStore = defineStore('hero', {
   state: () => ({
     heroes: [],
   }),
@@ -37,3 +37,4 @@ export const useHeroStore = defineStore('hero', {
     },
   },
 });
+*/

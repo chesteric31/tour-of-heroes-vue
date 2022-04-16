@@ -1,26 +1,25 @@
 <template>
   <h2>My Heroes</h2>
   <ul class="heroes">
-    <li v-for="hero of gettersHeroes" :key="hero.id">
+    <li v-for="hero of heroes" :key="hero.id">
     <button type="button" @click="onSelect(hero)"
     :class="{selected: hero === selectedHero}">
       <span class="badge">{{ hero.id }}</span>
       <span class="name">{{ hero.name }}</span>
     </li>
   </ul>
-  <hero-detail v-bind:hero="selectedHero"
-  v-bind:key="selectedHero.id"></hero-detail>
+  <hero-detail :hero="selectedHero"></hero-detail>
 </template>
 
 <script>
 
 import HeroDetail from './HeroDetail.vue';
-import {useHeroStore} from '../store/heroes';
+//import {useHeroStore} from '../store/heroes';
 //import {useStore} from 'vuex'
 // declare the store variable
 //const store = useStore();
 
-const store = useHeroStore();
+//const store = useHeroStore();
 
 export default {
   name: 'Heroes',
@@ -52,17 +51,17 @@ export default {
       if (!this.selectedHero) return '';
       return this.selectedHero.name.toString().toUpperCase();
     },
-    getHeroes() {
+    /*getHeroes() {
       //return store.getHeroes
       return store.getters.getHeroes
     },
     heroes() {
       //return store.heroes
       return store.state.heroes
-    }
+    }*/
   },
   mounted() {
-    store.dispatch('fetchHeroes')
+    //store.dispatch('fetchHeroes')
   },
   methods: {
     onSelect(hero) {
