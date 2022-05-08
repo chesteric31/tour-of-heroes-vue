@@ -14,6 +14,7 @@
 <script>
 
 import HeroDetail from './HeroDetail.vue';
+import Hero from '../hero';
 
 export default {
   name: 'Heroes',
@@ -22,10 +23,7 @@ export default {
   },
   data() {
     return {
-      selectedHero: {
-        id: undefined,
-        name: undefined
-      },
+      selectedHero: Hero,
       heroes: [
         { id: 11, name: 'Dr Nice' },
         { id: 12, name: 'Narco' },
