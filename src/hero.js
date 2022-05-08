@@ -4,3 +4,4 @@ class Hero {
     this.name = name;
   }
 }
+export default Hero;
