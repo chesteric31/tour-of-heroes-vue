@@ -14,12 +14,6 @@
 <script>
 
 import HeroDetail from './HeroDetail.vue';
-//import {useHeroStore} from '../store/heroes';
-//import {useStore} from 'vuex'
-// declare the store variable
-//const store = useStore();
-
-//const store = useHeroStore();
 
 export default {
   name: 'Heroes',
@@ -50,19 +44,8 @@ export default {
     heroNameInUppercase() {
       if (!this.selectedHero) return '';
       return this.selectedHero.name.toString().toUpperCase();
-    },
-    /*getHeroes() {
-      //return store.getHeroes
-      return store.getters.getHeroes
-    },
-    heroes() {
-      //return store.heroes
-      return store.state.heroes
-    }*/
-  },
-  mounted() {
-    //store.dispatch('fetchHeroes')
-  },
+    }
+  }
   methods: {
     onSelect(hero) {
       this.selectedHero = hero;
