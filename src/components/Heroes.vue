@@ -45,7 +45,7 @@ export default {
       if (!this.selectedHero) return '';
       return this.selectedHero.name.toString().toUpperCase();
     }
-  }
+  },
   methods: {
     onSelect(hero) {
       this.selectedHero = hero;
